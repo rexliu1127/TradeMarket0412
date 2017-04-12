@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TradeMarketModelStoreContainer" CdmEntityContainer="TradeMarketEntities">
+    <EntitySetMapping Name="cart_order">
+      <EntityTypeMapping TypeName="TradeMarketModel.cart_order">
+        <MappingFragment StoreEntitySet="cart_order">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="department_id" ColumnName="department_id" />
+          <ScalarProperty Name="serial" ColumnName="serial" />
+          <ScalarProperty Name="temp_order_id" ColumnName="temp_order_id" />
+          <ScalarProperty Name="seller_id" ColumnName="seller_id" />
+          <ScalarProperty Name="seller_name" ColumnName="seller_name" />
+          <ScalarProperty Name="buyer_id" ColumnName="buyer_id" />
+          <ScalarProperty Name="buyer_name" ColumnName="buyer_name" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="tax_rate" ColumnName="tax_rate" />
+          <ScalarProperty Name="tax_add" ColumnName="tax_add" />
+          <ScalarProperty Name="tax_total" ColumnName="tax_total" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="order_state_id" ColumnName="order_state_id" />
+          <ScalarProperty Name="delivery_date" ColumnName="delivery_date" />
+          <ScalarProperty Name="shipment_type" ColumnName="shipment_type" />
+          <ScalarProperty Name="recipient" ColumnName="recipient" />
+          <ScalarProperty Name="shipment_address" ColumnName="shipment_address" />
+          <ScalarProperty Name="shipment_mobile" ColumnName="shipment_mobile" />
+          <ScalarProperty Name="shipment_tel" ColumnName="shipment_tel" />
+          <ScalarProperty Name="shipment_time" ColumnName="shipment_time" />
+          <ScalarProperty Name="shipment_memo" ColumnName="shipment_memo" />
+          <ScalarProperty Name="payment_type1" ColumnName="payment_type1" />
+          <ScalarProperty Name="payment_amount1" ColumnName="payment_amount1" />
+          <ScalarProperty Name="payment_type2" ColumnName="payment_type2" />
+          <ScalarProperty Name="payment_amount2" ColumnName="payment_amount2" />
+          <ScalarProperty Name="payment_type3" ColumnName="payment_type3" />
+          <ScalarProperty Name="payment_amount3" ColumnName="payment_amount3" />
+          <ScalarProperty Name="payment_type4" ColumnName="payment_type4" />
+          <ScalarProperty Name="payment_amount4" ColumnName="payment_amount4" />
+          <ScalarProperty Name="invoice_type" ColumnName="invoice_type" />
+          <ScalarProperty Name="invoice_title" ColumnName="invoice_title" />
+          <ScalarProperty Name="invoice_no" ColumnName="invoice_no" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cart_order_detail">
+      <EntityTypeMapping TypeName="TradeMarketModel.cart_order_detail">
+        <MappingFragment StoreEntitySet="cart_order_detail">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="product_customize_id" ColumnName="product_customize_id" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="unit_name" ColumnName="unit_name" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="tax_rate" ColumnName="tax_rate" />
+          <ScalarProperty Name="tax_add" ColumnName="tax_add" />
+          <ScalarProperty Name="tax_total" ColumnName="tax_total" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="department">
+      <EntityTypeMapping TypeName="TradeMarketModel.department">
+        <MappingFragment StoreEntitySet="department">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="department_name" ColumnName="department_name" />
+          <ScalarProperty Name="title" ColumnName="title" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="member">
+      <EntityTypeMapping TypeName="TradeMarketModel.member">
+        <MappingFragment StoreEntitySet="member">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="role" ColumnName="role" />
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="member_name" ColumnName="member_name" />
+          <ScalarProperty Name="account" ColumnName="account" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile" ColumnName="mobile" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="contact_address_city_o" ColumnName="contact_address_city_o" />
+          <ScalarProperty Name="contact_address_area_o" ColumnName="contact_address_area_o" />
+          <ScalarProperty Name="contact_address_street_o" ColumnName="contact_address_street_o" />
+          <ScalarProperty Name="contact_address_o" ColumnName="contact_address_o" />
+          <ScalarProperty Name="contact_address_zipno_o" ColumnName="contact_address_zipno_o" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="update_user_name" ColumnName="update_user_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="member_type">
+      <EntityTypeMapping TypeName="TradeMarketModel.member_type">
+        <MappingFragment StoreEntitySet="member_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="member_type_name" ColumnName="member_type_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product">
+      <EntityTypeMapping TypeName="TradeMarketModel.product">
+        <MappingFragment StoreEntitySet="product">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="department_id" ColumnName="department_id" />
+          <ScalarProperty Name="public_id" ColumnName="public_id" />
+          <ScalarProperty Name="product_customize_id" ColumnName="product_customize_id" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="short_product_name" ColumnName="short_product_name" />
+          <ScalarProperty Name="english_name" ColumnName="english_name" />
+          <ScalarProperty Name="product_type_id" ColumnName="product_type_id" />
+          <ScalarProperty Name="specification1" ColumnName="specification1" />
+          <ScalarProperty Name="specification2" ColumnName="specification2" />
+          <ScalarProperty Name="specification3" ColumnName="specification3" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="width" ColumnName="width" />
+          <ScalarProperty Name="height" ColumnName="height" />
+          <ScalarProperty Name="barcode1" ColumnName="barcode1" />
+          <ScalarProperty Name="reference_price1" ColumnName="reference_price1" />
+          <ScalarProperty Name="reference_price2" ColumnName="reference_price2" />
+          <ScalarProperty Name="reference_price3" ColumnName="reference_price3" />
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+          <ScalarProperty Name="display_unit" ColumnName="display_unit" />
+          <ScalarProperty Name="image_url" ColumnName="image_url" />
+          <ScalarProperty Name="tax_type" ColumnName="tax_type" />
+          <ScalarProperty Name="sales_type" ColumnName="sales_type" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="update_member_id" ColumnName="update_member_id" />
+          <ScalarProperty Name="brand" ColumnName="brand" />
+          <ScalarProperty Name="expiration_date" ColumnName="expiration_date" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="expiration_days" ColumnName="expiration_days" />
+          <ScalarProperty Name="expiration_alert_percent" ColumnName="expiration_alert_percent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_on_sales">
+      <EntityTypeMapping TypeName="TradeMarketModel.product_on_sales">
+        <MappingFragment StoreEntitySet="product_on_sales">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_customize_id" ColumnName="product_customize_id" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="update_user_id" ColumnName="update_user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_type">
+      <EntityTypeMapping TypeName="TradeMarketModel.product_type">
+        <MappingFragment StoreEntitySet="product_type">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_type_name" ColumnName="product_type_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="supply">
+      <EntityTypeMapping TypeName="TradeMarketModel.supply">
+        <MappingFragment StoreEntitySet="supply">
+          <ScalarProperty Name="payment_term_id" ColumnName="payment_term_id" />
+          <ScalarProperty Name="tax_add" ColumnName="tax_add" />
+          <ScalarProperty Name="tax_rate" ColumnName="tax_rate" />
+          <ScalarProperty Name="update_user_id" ColumnName="update_user_id" />
+          <ScalarProperty Name="currency_id" ColumnName="currency_id" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="website" ColumnName="website" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="account" ColumnName="account" />
+          <ScalarProperty Name="receiver" ColumnName="receiver" />
+          <ScalarProperty Name="bank_name" ColumnName="bank_name" />
+          <ScalarProperty Name="contact_address_zipno_h" ColumnName="contact_address_zipno_h" />
+          <ScalarProperty Name="contact_address_h" ColumnName="contact_address_h" />
+          <ScalarProperty Name="contact_address_street_h" ColumnName="contact_address_street_h" />
+          <ScalarProperty Name="contact_address_area_h" ColumnName="contact_address_area_h" />
+          <ScalarProperty Name="contact_address_city_h" ColumnName="contact_address_city_h" />
+          <ScalarProperty Name="contact_address_zipno_o" ColumnName="contact_address_zipno_o" />
+          <ScalarProperty Name="contact_address_o" ColumnName="contact_address_o" />
+          <ScalarProperty Name="contact_address_street_o" ColumnName="contact_address_street_o" />
+          <ScalarProperty Name="contact_address_area_o" ColumnName="contact_address_area_o" />
+          <ScalarProperty Name="contact_address_city_o" ColumnName="contact_address_city_o" />
+          <ScalarProperty Name="tel_other" ColumnName="tel_other" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="tel_h" ColumnName="tel_h" />
+          <ScalarProperty Name="tel_o" ColumnName="tel_o" />
+          <ScalarProperty Name="contact_mobile" ColumnName="contact_mobile" />
+          <ScalarProperty Name="contact" ColumnName="contact" />
+          <ScalarProperty Name="owner_mobile" ColumnName="owner_mobile" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="unified_business_no" ColumnName="unified_business_no" />
+          <ScalarProperty Name="nickname" ColumnName="nickname" />
+          <ScalarProperty Name="supply_name" ColumnName="supply_name" />
+          <ScalarProperty Name="supply_customize_id" ColumnName="supply_customize_id" />
+          <ScalarProperty Name="supply_type_id" ColumnName="supply_type_id" />
+          <ScalarProperty Name="department_id" ColumnName="department_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="error_log">
+      <EntityTypeMapping TypeName="TradeMarketModel.error_log">
+        <MappingFragment StoreEntitySet="error_log">
+          <ScalarProperty Name="contents" ColumnName="contents" />
+          <ScalarProperty Name="action" ColumnName="action" />
+          <ScalarProperty Name="controller" ColumnName="controller" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="product_unit">
+      <EntityTypeMapping TypeName="TradeMarketModel.product_unit">
+        <MappingFragment StoreEntitySet="product_unit">
+          <ScalarProperty Name="unit_name" ColumnName="unit_name" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="temp_cart">
+      <EntityTypeMapping TypeName="TradeMarketModel.temp_cart">
+        <MappingFragment StoreEntitySet="temp_cart">
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="memo" ColumnName="memo" />
+          <ScalarProperty Name="tax_total" ColumnName="tax_total" />
+          <ScalarProperty Name="tax_add" ColumnName="tax_add" />
+          <ScalarProperty Name="tax_rate" ColumnName="tax_rate" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="unit_name" ColumnName="unit_name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="product_customize_id" ColumnName="product_customize_id" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="temp_order_id" ColumnName="temp_order_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

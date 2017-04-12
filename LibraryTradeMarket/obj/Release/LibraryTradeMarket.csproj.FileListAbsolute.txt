@@ -1,0 +1,11 @@
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\bin\Release\LibraryTradeMarket.dll.config
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\bin\Release\LibraryTradeMarket.dll
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\bin\Release\LibraryTradeMarket.pdb
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\bin\Release\EntityFramework.dll
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\bin\Release\EntityFramework.xml
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\bin\Release\zh-Hant\EntityFramework.resources.dll
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\obj\Release\LibraryTradeMarket.dll
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\obj\Release\LibraryTradeMarket.pdb
+C:\Users\rex\Dropbox\Public\MyWork\TradeMarket\LibraryTradeMarket\obj\Release\LibraryTradeMarket.csprojResolveAssemblyReference.cache

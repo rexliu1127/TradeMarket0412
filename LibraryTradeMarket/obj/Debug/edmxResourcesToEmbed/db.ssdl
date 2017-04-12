@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TradeMarketModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cart_order">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="department_id" Type="int" Nullable="false" />
+    <Property Name="serial" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="temp_order_id" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="seller_id" Type="int" Nullable="false" />
+    <Property Name="seller_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="buyer_id" Type="int" Nullable="false" />
+    <Property Name="buyer_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="total" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="tax_rate" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="tax_add" Type="int" Nullable="false" />
+    <Property Name="tax_total" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="memo" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="update_date" Type="datetime" Nullable="false" />
+    <Property Name="order_state_id" Type="int" Nullable="false" />
+    <Property Name="delivery_date" Type="datetime" Nullable="false" />
+    <Property Name="shipment_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="recipient" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="shipment_address" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="shipment_mobile" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="shipment_tel" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="shipment_time" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="shipment_memo" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="payment_type1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="payment_amount1" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="payment_type2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="payment_amount2" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="payment_type3" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="payment_amount3" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="payment_type4" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="payment_amount4" Type="decimal" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="invoice_type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="invoice_title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="invoice_no" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="cart_order_detail">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="order_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="state" Type="int" Nullable="false" />
+    <Property Name="product_customize_id" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="product_name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="quantity" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="price" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="unit_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="total" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="tax_rate" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="tax_add" Type="int" Nullable="false" />
+    <Property Name="tax_total" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="memo" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="update_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="department">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="department_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="title" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tel" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fax" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="error_log">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="update_date" Type="datetime" Nullable="false" />
+    <Property Name="controller" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="action" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="contents" Type="nvarchar" MaxLength="1000" Nullable="false" />
+  </EntityType>
+  <EntityType Name="member">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="role" Type="int" Nullable="false" />
+    <Property Name="type_id" Type="int" Nullable="false" />
+    <Property Name="member_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="account" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="mobile" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="tel" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fax" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="state" Type="int" Nullable="false" />
+    <Property Name="contact_address_city_o" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_area_o" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_street_o" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_o" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="contact_address_zipno_o" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="update_date" Type="datetime" Nullable="false" />
+    <Property Name="update_user_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="member_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="member_type_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="department_id" Type="int" Nullable="false" />
+    <Property Name="public_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="product_customize_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="product_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="short_product_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="english_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="product_type_id" Type="int" Nullable="false" />
+    <Property Name="specification1" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="specification2" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="specification3" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="length" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="width" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="height" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="barcode1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="reference_price1" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="reference_price2" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="reference_price3" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="unit_id" Type="int" Nullable="false" />
+    <Property Name="display_unit" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="image_url" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="tax_type" Type="int" Nullable="false" />
+    <Property Name="sales_type" Type="int" Nullable="false" />
+    <Property Name="update_date" Type="datetime" Nullable="false" />
+    <Property Name="update_member_id" Type="int" Nullable="false" />
+    <Property Name="brand" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="expiration_date" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="memo" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="expiration_days" Type="int" Nullable="false" />
+    <Property Name="expiration_alert_percent" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="product_on_sales">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="product_customize_id" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="update_date" Type="datetime" Nullable="false" />
+    <Property Name="update_user_id" Type="int" />
+  </EntityType>
+  <EntityType Name="product_type">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="product_type_name" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="product_unit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="unit_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="supply">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="department_id" Type="int" Nullable="false" />
+    <Property Name="supply_type_id" Type="int" Nullable="false" />
+    <Property Name="supply_customize_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="supply_name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="nickname" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="unified_business_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="owner" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="owner_mobile" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_mobile" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tel_o" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tel_h" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fax" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tel_other" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_city_o" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_area_o" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_street_o" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_o" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="contact_address_zipno_o" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_city_h" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_area_h" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_street_h" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="contact_address_h" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="contact_address_zipno_h" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="bank_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="receiver" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="account" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="website" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="memo" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="update_date" Type="datetime" Nullable="false" />
+    <Property Name="currency_id" Type="int" Nullable="false" />
+    <Property Name="update_user_id" Type="int" />
+    <Property Name="tax_rate" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="tax_add" Type="int" Nullable="false" />
+    <Property Name="payment_term_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="temp_cart">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="temp_order_id" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="state" Type="int" Nullable="false" />
+    <Property Name="product_customize_id" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="product_name" Type="nvarchar" MaxLength="500" Nullable="false" />
+    <Property Name="quantity" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="price" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="unit_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="total" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="tax_rate" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="tax_add" Type="int" Nullable="false" />
+    <Property Name="tax_total" Type="numeric" Precision="18" Scale="4" Nullable="false" />
+    <Property Name="memo" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="update_date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="TradeMarketModelStoreContainer">
+    <EntitySet Name="cart_order" EntityType="Self.cart_order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="cart_order_detail" EntityType="Self.cart_order_detail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="department" EntityType="Self.department" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="error_log" EntityType="Self.error_log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="member" EntityType="Self.member" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="member_type" EntityType="Self.member_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product" EntityType="Self.product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product_on_sales" EntityType="Self.product_on_sales" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product_type" EntityType="Self.product_type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="product_unit" EntityType="Self.product_unit" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="supply" EntityType="Self.supply" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="temp_cart" EntityType="Self.temp_cart" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
